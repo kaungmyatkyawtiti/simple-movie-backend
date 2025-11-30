@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+
 const ReviewSchema = new Schema({
   movie: {
     type: Schema.Types.ObjectId,
-    ref: "Movies",
+    ref: "Movie",
   },
   rating: {
     type: Number,
@@ -15,4 +16,4 @@ const ReviewSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model("Reviews", ReviewSchema);
+module.exports = mongoose.model("Review", ReviewSchema);
